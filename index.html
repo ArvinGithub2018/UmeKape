@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U MÊ KAPE </title>
+    <link rel="stylesheet" href="assets/css/ume.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <nav class="nav-bar">
+        <div class="logo">U MÊ KAPE</div>
+        <ul class="menu" id="menu">
+            <li><a href="#story">OUR STORY</a></li>
+            <li><a href="#stores">PROMOTION</a></li>
+            <li><a href="#mission">MISSION</a></li>
+            <li><a href="#milestone">MILESTONES</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+<!-- === HERO BANNER HTML === -->
+<section class="umk-hero">
+ 
+  <!-- Background layers -->
+  <div class="umk-hero__pattern" aria-hidden="true"></div>
+  <div class="umk-hero__gradient" aria-hidden="true"></div>
+ 
+  <div class="umk-hero__inner">
+ 
+    <!-- Left: Character illustration -->
+    <div class="umk-hero__character">
+      <picture>
+        <!-- Landscape/Desktop view -->
+        <source srcset="picture/characterhalf.png" media="(min-width: 869px)">
+        
+        <!-- Portrait/Mobile view -->
+        <img src="picture/character3.png" alt="Umé Kape Vietnamese girl holding coffee">
+      </picture>
+    </div>
+ 
+    <!-- Right: Brand identity -->
+    <div class="umk-hero__content">
+      <img class="umk-hero-logo" src="picture/profilepic.png" alt="U MÊ KAPE Profile Picture">
+ 
+    </div>
+ 
+  </div>
+</section>
+
+
+    <!-- Hero Section -->
+<!-- FIXED BACKGROUND MANAGER -->
+<div class="fixed-bg-manager" aria-hidden="true">
+    <!-- Unang Image para sa Header/Hero ng page -->
+    <div class="fixed-bg fixed-bg-hero active" data-bg="hero" style="background-image: url('picture/bccover.png');"></div>
+    
+    <!-- Image para sa UNANG Parallax Section (Pagkatapos ng Our Story) -->
+    <div class="fixed-bg fixed-bg-gap" data-bg="parallax1" style="background-image: url('picture/bccover.png');"></div>
+
+    <!-- Image para sa PANGALAWANG Parallax Section (Pagkatapos ng Promotion) -->
+    <div class="fixed-bg fixed-bg-gap" data-bg="parallax2" style="background-image: url('picture/bccover.png');"></div>
+</div>
+<header class="hero reveal" data-bg="hero">
+      
+</header>
+
+<div class="story-body-content">
+<section id="story" class="story-section">
+        <div class="story-copy reveal">
+            <span class="story-eyebrow">OUR STORY</span>
+            <h2 class="story-title">U MÊ KAPE — Vietnamese coffee in every moment</h2>
+            <p>U MÊ KAPE was born from a love of slow mornings, roasted beans, and the warm feeling of gathering together. Every detail in our space is designed to feel familiar, cozy, and full of story.</p>
+            <p>From the first café to the scenes of friends crossing paths, our story is written one cup at a time. This is the place where tradition meets a modern take on Vietnamese coffee culture.</p>
+        </div>
+        <div class="story-media reveal">
+            <!-- <div class="story-feature">
+                <img src="picture/profile.jpg" alt="U MÊ KAPE story image">
+            </div> -->
+            <div class="story-slider">
+                <button class="slider-btn prev" type="button" onclick="changeSlide(-1)" aria-label="Previous slide">‹</button>
+                <div class="slider-track">
+                    <img src="picture/slider1.jpg" class="slide active-slide" alt="Cafe interior">
+                    <img src="picture/slider2.jpg" class="slide" alt="Coffee and dessert">
+                    <img src="picture/slider3.jpg" class="slide" alt="Customers enjoying coffee">
+                    <img src="picture/slider4.jpg" class="slide" alt="Cafe seating area">
+                </div>
+                <button class="slider-btn next" type="button" onclick="changeSlide(1)" aria-label="Next slide">›</button>
+            </div>
+            <div class="slider-indicators">
+                <button type="button" class="active" onclick="goToSlide(0)"></button>
+                <button type="button" onclick="goToSlide(1)"></button>
+                <button type="button" onclick="goToSlide(2)"></button>
+                <button type="button" onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+</section> 
+</div>
+
+<!-- SECTIONS SA UNANG IMAGE -->
+<section class="parallax-section fixed-bg-section parallax-vision" data-bg="parallax1"></section>
+<!-- Promotion Section -->
+<div class="promotion-body-content">
+<section id="stores" class="stores-section">
+        <h2 class="reveal">PROMOTION</h2>
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="switchStore('korea', event)">U ME KAPE - TAFT</button>
+            <button class="tab-btn" onclick="switchStore('malaysia', event)">U ME KAPE - RECTO BRANCH</button>
+            <!-- <button class="tab-btn" onclick="switchStore('canada', event)">CANADA</button> -->
+        </div>
+
+        <div id="store-content" class="fade-in reveal">
+            <h3 id="store-title">U ME KAPE - TAFT</h3>
+            <p id="store-desc">Capturing the soul of Hanoi in the heart of Seoul.</p>
+            <div class="image-gallery">
+                <div class="img-box">Store 1</div>
+                <div class="img-box">Store 2</div>
+            </div>
+        </div>
+ </section>
+</div>
+
+
+<!-- SECTIONS SA PANGALAWANG IMAGE -->
+<section class="parallax-section fixed-bg-section parallax-vision" data-bg="parallax2"></section>
+    <!-- Mission & Vision (Premium Section) -->
+<section id="mission" class="mission-section">
+    <div class="container-mission">
+        <h2 class="main-title">Our Mission & Vision</h2>
+
+        <section class="section-row mission-row">
+            <div class="image-box">
+                <img src="picture/578266268_122151763346814071_2913376268891241749_n.jpg" alt="Our Mission">
+            </div>
+            <div class="content-box">
+                <h3>Mission</h3>
+                <p>To inspire imagination and bring about a distinct emotional experience of Vietnam.</p>
+            </div>
+        </section>
+
+        <section class="section-row vision-row">
+            <div class="image-box">
+                <img src="picture/578266268_122151763346814071_2913376268891241749_n.jpg" alt="Our Vision">
+            </div>
+            <div class="content-box">
+                <h3>Vision</h3>
+                <p>To become the most distinguished and innovative coffee chain in vietnam and beyond.</p>
+            </div>
+        </section>
+    </div>
+</section>
+
+<section id="milestone" class="milestones background-container">
+    <div class="container reveal">
+        <header class="header-section">
+            <h1>Milestones</h1>
+            <p>Our journey as a Vietnamese-inspired coffee destination in Manila, serving students, professionals, and coffee lovers in the heart of Taft Avenue.</p>
+        </header>
+
+        <div class="timeline-container">
+            <div class="timeline-track" id="timelineTrack">
+                
+                <div class="timeline-segment">
+                    <div class="node-container">
+                        <div class="node-dot"></div>
+                        <div class="node-year">2024</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="picture/slider7.jpg" alt="Discovered by the Community">
+                    </div>
+                    <div class="content-container">
+                        <h2 class="content-title">Discovered by the Community</h2>
+                        <p class="content-desc">Located in Malate, Manila beside the university district, U ME KAPE began gaining attention among students and café enthusiasts for its Vietnamese coffee offerings, cozy interiors, and study-friendly atmosphere. Community discussions started highlighting its signature Egg Coffee and authentic Vietnamese café experience.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-segment">
+                    <div class="node-container">
+                        <div class="node-dot"></div>
+                        <div class="node-year">2025</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="picture/slider6.jpg" alt="Growing Online Presence">
+                    </div>
+                    <div class="content-container">
+                        <h2 class="content-title">Growing Online Presence</h2>
+                        <p class="content-desc">U ME KAPE became increasingly visible through social media recommendations and café discovery platforms. Customers praised the café's late-night operating hours, Vietnamese-inspired menu, and laptop-friendly environment, helping it build a loyal customer base among students and remote workers.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-segment">
+                    <div class="node-container">
+                        <div class="node-dot"></div>
+                        <div class="node-year">2025</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="picture/689769486_122178273044814071_8517480686092326201_n.jpg" alt="Recognized as a Study & Work Hub">
+                    </div>
+                    <div class="content-container">
+                        <h2 class="content-title">Recognized as a Study & Work Hub</h2>
+                        <p class="content-desc">The café was featured on café directories highlighting work-friendly spaces in Metro Manila. Reviews emphasized its free Wi-Fi, comfortable seating, welcoming ambiance, and authentic Vietnamese food and beverage offerings, making it a preferred destination for studying and remote work.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-segment">
+                    <div class="node-container">
+                        <div class="node-dot"></div>
+                        <div class="node-year">2026</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="picture/652769711_17881933140495293_3798282172717247663_n.jpg" alt="Established Taft Destination">
+                    </div>
+                    <div class="content-container">
+                        <h2 class="content-title">Established Taft Destination</h2>
+                        <p class="content-desc">Operating from the Manor Building along Taft Avenue, U ME KAPE continues to serve as a 24-hour coffee destination in Malate. The café is recognized for Vietnamese-style coffee, particularly its Egg Coffee, and remains a popular stop for students from nearby universities and Manila café explorers.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<section class="parallax-section fixed-bg-section parallax-vision" data-bg="parallax3"></section>
+
+<section class="thank-you-section">
+  <div class="ukt-section">
+
+    <!-- Tile background pattern -->
+    <div class="ukt-bg-pattern" aria-hidden="true"></div>
+
+    <!-- ===== LEFT COLUMN ===== -->
+    <div class="ukt-left">
+      <div>
+        <p class="ukt-cam-on">Cảm ơn</p>
+        <h2 class="ukt-heading">Thank You!</h2>
+
+        <p class="ukt-body">
+          Thank you for purchasing some of our coffee,
+          drinks and food, your support helps us
+          continue serving quality products while
+          sharing authentic Vietnamese café culture
+          and experience here in the Philippines.
+        </p>
+
+        <p class="ukt-love">We know you'll love it!</p>
+      </div>
+
+      <div class="ukt-bottom">
+
+        <!-- Social Media -->
+        <div class="ukt-social">
+          <div class="ukt-social-icons">
+
+            <!-- Facebook — replace href with your page URL -->
+            <a href="https://facebook.com/umekape" target="_blank" rel="noopener" aria-label="Ume Kape on Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram — replace href with your profile URL -->
+            <a href="https://instagram.com/umekape" target="_blank" rel="noopener" aria-label="Ume Kape on Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <!-- TikTok — replace href with your TikTok URL -->
+            <a href="https://tiktok.com/@umekape" target="_blank" rel="noopener" aria-label="Ume Kape on TikTok">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </a>
+
+          </div>
+          <a class="ukt-handle" href="https://instagram.com/umekape" target="_blank" rel="noopener">@UMEKAPE</a>
+        </div>
+
+        <!-- QR Code -->
+        <div class="ukt-qr-wrap">
+          <div class="ukt-qr-box">
+            <!--
+              REPLACE THIS with your actual QR code image:
+              <img src="assets/qr-review.png" alt="Scan to leave a Google review">
+            -->
+            <img src="YOUR-QR-CODE-IMAGE.png" alt="Scan to leave a review">
+          </div>
+          <p class="ukt-qr-label">Scan the QR code to leave a review.</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- end .ukt-left -->
+
+    <!-- ===== RIGHT COLUMN ===== -->
+    <div class="ukt-right">
+
+      <!--
+        REPLACE src with your coffee/drink hero photo.
+        Recommended: a close-up of iced Vietnamese coffee being poured.
+      -->
+      <img
+        class="ukt-bg-photo"
+        src="picture/sidepicture.png"
+        alt="Ume Kape iced Vietnamese coffee"
+      >
+
+      <!--
+        Vietnamese girl illustration — positioned to overlap left/right columns.
+        REPLACE src with your actual illustration asset (PNG with transparency).
+      -->
+      <img
+        class="ukt-character"
+        src="picture/character.jpg"
+        alt=""
+        aria-hidden="true"
+      >
+
+      <!-- Brand logo overlay -->
+      <div class="ukt-right-logo" aria-hidden="true">
+        <span class="ukt-logo-text">UMÉ<br>KAPE</span>
+        <span class="ukt-logo-sub">Authentic Vietnamese House</span>
+      </div>
+
+    </div>
+    <!-- end .ukt-right -->
+
+    <!-- Vietnamese geometric border strip -->
+    <!-- <div class="ukt-border-strip" aria-hidden="true"></div> -->
+
+  </div>
+</section>
+
+<!-- GSAP CDN -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script>
+
+
+        const track = document.getElementById('timelineTrack');
+        track.setAttribute('tabindex', '0');
+        track.style.outline = 'none';
+        
+        track.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                track.scrollLeft += 250;
+            } else if (e.key === 'ArrowLeft') {
+                track.scrollLeft -= 250;
+            }
+        });
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    if (hamburger && menu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    }
+
+    const storeData = {
+    korea: {
+        title: "U ME KAPE - TAFT",
+        desc: "Uncovering the essence of Hanoi in the vibrant heart of Seoul.",
+    },
+    malaysia: {
+        title: "U ME KAPE - RECTO BRANCH",
+        desc: "A warm Vietnamese space nestled in the bustling heart of Kuala Lumpur.",
+    },
+    canada: {
+        title: "CANADA",
+        desc: "Bringing the aroma of coconut coffee to the cool breezes of Toronto.",
+    }
+};
+
+function switchStore(country, event) {
+    // Update active button
+    const btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(btn => btn.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+
+    // Update text with a fade animation
+    const content = document.getElementById('store-content');
+    content.style.opacity = 0;
+
+    setTimeout(() => {
+        document.getElementById('store-title').innerText = storeData[country].title;
+        document.getElementById('store-desc').innerText = storeData[country].desc;
+        content.style.opacity = 1;
+    }, 200);
+}
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.story-section .slide');
+const indicators = document.querySelectorAll('.slider-indicators button');
+
+function updateSlider() {
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('active-slide', index === currentSlide);
+    });
+    indicators.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function changeSlide(amount) {
+    currentSlide = (currentSlide + amount + slides.length) % slides.length;
+    updateSlider();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+setInterval(() => changeSlide(1), 5000);
+
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.18 });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Fixed background switching behavior
+const fixedBackgrounds = document.querySelectorAll('.fixed-bg');
+const bgSectionTriggers = document.querySelectorAll('[data-bg]');
+
+function updateFixedBackground() {
+    const referenceY = window.innerHeight * 0.2;
+    let activeBgId = 'hero';
+
+    bgSectionTriggers.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= referenceY && rect.bottom > referenceY) {
+            activeBgId = section.dataset.bg;
+        }
+    });
+
+    fixedBackgrounds.forEach(bg => {
+        bg.classList.toggle('active', bg.dataset.bg === activeBgId);
+    });
+}
+
+window.addEventListener('scroll', () => requestAnimationFrame(updateFixedBackground), { passive: true });
+window.addEventListener('resize', updateFixedBackground);
+updateFixedBackground();
+</script>
+
+<!-- Premium Footer -->
+<footer class="premium-footer">
+    <div class="footer-content">
+        <!-- Logo -->
+        <div class="footer-logo">
+            <div class="footer-logo-text">U MÊ KAPE</div>
+        </div>
+
+        <!-- Social Media Heading -->
+        <h2 class="footer-social-heading">FOLLOW US ON OUR<br>SOCIAL NETWORKS</h2>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons-container">
+            <a href="https://www.umekape.com" class="social-icon-link" title="Visit our website" aria-label="Website" target="_blank" rel="noopener noreferrer">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    <path d="M2 12h20"></path>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/share/17YNhX2Rws/?mibextid=wwXIfr" class="social-icon-link" title="Follow on Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@umekape?_r=1&_t=ZS-96wmf3gsRWO" class="social-icon-link" title="Follow on TikTok" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.12v12.4a2.67 2.67 0 1 1-2.67-2.67c.21 0 .41.02.61.07V8.64a5.79 5.79 0 0 0-.61-.03A5.79 5.79 0 1 0 15.82 14V8.73a7.92 7.92 0 0 0 4.64 1.49V7.13c-.3 0-.59-.15-.87-.44z"/>
+            </svg>
+            </a>
+            <a href="https://www.instagram.com/umekape?igsh=MWtlb2c3ZWF5aDNmOQ==" class="social-icon-link" title="Follow on Instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 U MÊ KAPE. All Rights Reserved</p>
+            <a href="#" class="footer-url">www.umekape.com</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
